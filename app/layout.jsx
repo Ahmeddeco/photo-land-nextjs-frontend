@@ -1,5 +1,7 @@
 import localFont from 'next/font/local'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const expo2 = localFont({ src: '../fonts/Exo2-VariableFont_wght.ttf' })
 
@@ -11,7 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={`${expo2.className} antialiased`}>{children}</body>
+			<body className={`${expo2.className} antialiased`}>
+				<Header />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	)
 }
