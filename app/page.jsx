@@ -1,12 +1,12 @@
-import useFetch from '@/data/useFetch'
+import { getData } from '@/lib/data'
 
 export default async function HomePage() {
-	const { data } = useFetch('/products?populate=*')
-	console.log(data)
+	const products = await getData('/products?populate=*')
+	// console.log(products)
 
 	return (
 		<main className='text-7xl font-bold underline container h-screen w-screen flex  items-center justify-center'>
-			<h1>HomePage</h1>
+			<h1>{products.data[2].attributes.title}</h1>
 		</main>
 	)
 }
