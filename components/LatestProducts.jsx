@@ -1,5 +1,4 @@
 import { getData } from '@/lib/data'
-import React from 'react'
 import ProductSlider from './ProductSlider'
 
 const LatestProducts = async () => {
