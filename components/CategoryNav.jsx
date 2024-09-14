@@ -7,7 +7,7 @@ const CategoryNav = async () => {
 
 	return (
 		<aside className='hidden xl:flex h-full'>
-			<div className='bg-primary flex flex-col w-full  rounded-xl overflow-hidden'>
+			<nav className='bg-primary flex flex-col w-full  rounded-xl overflow-hidden'>
 				<div className='bg-accent py-4 text-primary uppercase font-semibold flex items-center justify-center'>
 					Browse Categories
 				</div>
@@ -24,7 +24,7 @@ const CategoryNav = async () => {
 						)
 					})}
 				</div>
-			</div>
+			</nav>
 		</aside>
 	)
 }

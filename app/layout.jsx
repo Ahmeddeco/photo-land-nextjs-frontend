@@ -2,6 +2,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CartProvider from '@/context/CartContext'
 
 const expo2 = localFont({ src: '../fonts/Exo2-VariableFont_wght.ttf' })
 
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={`${expo2.className} antialiased`}>
-				<Header />
-				{children}
-				<Footer />
+				<CartProvider>
+					<Header />
+					{children}
+					<Footer />
+				</CartProvider>
 			</body>
 		</html>
 	)

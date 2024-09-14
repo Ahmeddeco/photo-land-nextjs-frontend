@@ -14,7 +14,7 @@ const Product = ({ product }) => {
 				<div className='w-full h-[200px] flex items-center justify-center relative'>
 					<Image
 						src={`${process.env.NEXT_PUBLIC_HOST_URL}${product.attributes.image.data.attributes.url}`}
-						alt='img'
+						alt={product.attributes.title}
 						width={160}
 						height={160}
 						className='group-hover:scale-90 transition-all'
