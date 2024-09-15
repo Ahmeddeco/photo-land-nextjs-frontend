@@ -14,13 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={`${expo2.className} antialiased`}>
-				<CartProvider>
+			<CartProvider>
+				<body className={`${expo2.className} antialiased`}>
 					<Header />
 					{children}
 					<Footer />
-				</CartProvider>
-			</body>
+				</body>
+			</CartProvider>
 		</html>
 	)
 }

@@ -22,7 +22,6 @@ const SearchForm = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log(seatchTerm)
 
 		if (seatchTerm.length > 0) {
 			router.push(`/search?query=${seatchTerm}`)
